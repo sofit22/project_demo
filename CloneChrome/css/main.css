@@ -1,0 +1,185 @@
+/*sacar el margen, el padding, 
+definir tamaño de fuente y familia tipografica*/
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*para sacar el subrayado de las etiquetas a*/
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+/*para definir que ocupe todo el ancho y una altura de 60px*/
+header{
+    width: 100%;
+    height: 60px;
+}
+/*para ordenar los elementos en horizontal y justificar el contenido arriba a la derecha*/
+header nav{
+    display: flex;
+    justify-content: flex-end;
+}
+/*definir un ancho del nav, sacarle la viñeta con list-style y justificar 
+los elementos en el centro*/
+header nav .nav-right-section{
+    width: 250px;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+} 
+/*especificamente decirle que todas las etiquetas a dentro de la clase nav-right-section, 
+tengan un espacio entre ellas de 10 px y color negro*/
+nav .nav-right-section a{
+    margin-right: 10px;
+    color: #000000;
+}
+/*agrego el incono de secciones, le digo que no se repita y se centre, que tenga el tamaño
+de el contenedor (nav) y un ancho y alto de 25 px*/
+nav .nav-right-section .menu-icon {
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+}
+/*agrego la imagen de perfil con una url y le doy un borde redondo y un margen a la derecha
+para que no se pegue tanto*/
+nav .nav-right-section img {
+    border-radius: 50%;
+    margin-left: 10px;
+}
+/*centro todo lo que esta en el main y le doy un margen arriba de 150px*/
+main{
+    margin-top: 150px;
+    text-align: center;
+}
+/*le doy un ancho y margen abajo, para que se ubique mas abajo. 
+El margin derecho auto se ubica de forma automatica con el porcentaje que sobra (responsive)*/
+main .main-logo{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+/*tamaño del logo de google que esta dentro de la clase main logo*/
+main .main-logo img{
+    width: 300px;
+}
+/*le asignamos un ancho a la barra buscadora que va a contener los dos botones y un margen que centre la barra
+y un margen abajo para separarlo de los botones buscar y me siento con suerte*/
+main .main-input {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+/*aca me ocupo de darle un ancho a la barra y darle un borde redondeado con color gris de un px, alineando y centrando
+el contenido*/
+main .main-input-container {
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*le doy un ancho y alto a la caja de input (buscar) y le quitamos el borde azul*/
+main .main-input input{
+    width: 450px;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+/*aca se le agrega la sombra hover a la barra buscadora y se le asigna un color*/
+main .main-input-container:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+/*aca se agrega el icono de buscar a la barra*/
+main .main-input .search-icon {
+    background-image: url('https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_search_48px-512.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+/*aca se agrega el icono de microfono*/
+main .main-input .micro-icon {
+    background-image: url('https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+/*se asigna un ancho y un margen automatico a la seccion botones del main*/
+main .main-buttons {
+    width: 530px;
+    margin: 0 auto;
+}
+/*se asigna la posicion horizontal de los botones que estan en la clase main dentro de los div*/
+main .main-buttons div {
+    display: inline-block;
+}
+/*se asigna a los botones un alto de 36px, un color de fondo, se quita el borde, se agranda un poco la tipografia
+y se le asigna el borde redondeado y un padding de 0 a lo alto y 15 a lo ancho */
+main .main-buttons button{
+    height: 36px;
+    background-color: #f2f2f2;
+    border:none;
+    font-size: 14px;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 15px;
+}
+/*aca se le asigna el hover a los botones con un borde solido para que se vea
+y se le asigna los colores de este estado*/
+main .main-buttons button:hover{
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px #000001;
+    color: #222;
+}
+/*asigna estilos al footer para que ocupe el ancho de la pantalla,
+se le asigna un alto, y la posición absoluta con margen 0 abajo para que se mantenga siempre abajo de la página
+y usamos grid template columns para dividir en fracciones el footer
+display grid separa en secciones. Align items lo pone en el centro y le asignamos un font size y color de fondo.
+Le ponemos un color de fondo y un borde mas oscuro de 1 px solido*/
+footer{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 13px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+/*aca se asigna a la etiqueta ul un margen, se le quita el estilo de la lista
+y se pone en posicion horizontal los elementos con un padding de 0*/
+footer ul{
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+/*justifica la seccion de la derecha a la derecha*/
+footer .footer-left {
+    justify-content: left;
+}
+/*justifica la seccion de la izquierda a la izquierda*/
+footer .footer-right{
+    justify-content: right;
+}
+/*se le asigna un margen de 10 px y un color de fondo gris*/
+footer ul li a{
+    margin: 10px;
+    color: #5f6368;
+}
